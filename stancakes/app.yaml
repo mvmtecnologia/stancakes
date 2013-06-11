@@ -1,0 +1,20 @@
+application: stancakes
+version:  1
+runtime:  python27
+api_version:  1
+threadsafe:  true
+
+default_expiration: "4d 5h"
+   
+handlers:
+- url: /js
+  static_dir: js
+- url: /font-awesome
+  static_dir: font-awesome
+- url: /style
+  static_dir: style
+- url: /img
+  static_dir: img
+
+- url: /.*
+  script: controller.application
